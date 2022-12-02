@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.hidden {
+    display: none;
+}
+
+.Titles {
+    color: #273377;
+    font-size: 1.5rem;
+}
+
+.Labels {
+    color: #8393b3;
+    font-weight: 400;
+}
+
+input.form-control {
+    margin-bottom: 5px;
+}
+
+input.btn-primary {
+    width: 175px;
+    height: 2rem;
+    line-height: 1rem;
+    background-color: #06286c;
+}
+
+input[type="submit"] {
+    margin-bottom: 40px;
+}
+
+.corText {
+    color: #273377;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Button {
+    padding: 3px 20px;
+    background-color: #06286c;
+    border-radius: 5px;
+    color: white;
+}

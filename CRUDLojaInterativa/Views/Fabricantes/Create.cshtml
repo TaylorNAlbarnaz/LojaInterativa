@@ -1,0 +1,48 @@
+﻿@model CRUDLojaInterativa.Models.Fabricante
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="Titles" style="margin-bottom: 35px;" >FABRICANTE E CATEGORIA</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label class="Labels" style="margin-bottom: 5px;">FABRICANTE</label>
+            <div class="form-group">
+                <input asp-for="Nome" class="form-control"
+                    placeholder="Digite o nome da fabricante" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <label class="Labels" style="margin-bottom: 5px;">CATEGORIA</label>
+            <div class="form-group">
+                <input asp-for="Categoria1" class="form-control"
+                       placeholder="Digite o nome da categoria 1" />
+                <span asp-validation-for="Categoria1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Categoria2" class="form-control"
+                    placeholder="Digite o nome da categoria 2"/>
+                <span asp-validation-for="Categoria2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Categoria3" class="form-control"
+                    placeholder="Digite o nome da categoria 3"/>
+                <span asp-validation-for="Categoria3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retornar a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

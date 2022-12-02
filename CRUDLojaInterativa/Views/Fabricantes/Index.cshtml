@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CRUDLojaInterativa.Models.Fabricante>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Fabricantes</h1>
+
+<p>
+    <a class="Button" asp-action="Create">Adicionar novo</a>
+</p>
+<table class="table corText">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria3)
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria3)
+        </td>
+        <td>
+            <a class="Button" style="margin-right: 20px;" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+            <a class="Button" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+        </td>
+    </tr>
+}
+</table>
